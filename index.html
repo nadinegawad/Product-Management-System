@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Management System</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <section class="test">
+    <div class="container text-center py-5 w-75">
+      <!-- title -->
+      <h1>CRUDS</h1>
+      <h4 class="mb-3"> Product Management System</h4>
+      <!-- create -->
+      <div class="mb-4 create-section ">
+        <input oninput="nameValidation()" id="productNameInput" type="text" class="form-control mb-3" placeholder="product name">
+        <p id="wrongName" class="text-danger text-start alert alert-info  p-1 d-none">Invalid name [min : 3 character , max : 10 character]</p>
+        <div class="d-flex mb-3 gap-2 align-items-center">
+          <input onkeyup="getTotalPrice()" oninput="priceValidation()" id="productPriceInput" type="number" class="form-control "
+            placeholder="price">
+          <input onkeyup="getTotalPrice()" type="number" id="priceTaxesInput" class="form-control w-50 " placeholder="taxes">
+          <input onkeyup="getTotalPrice()" type="number" id="priceAdsInput" class="form-control w-50" placeholder="ads">
+          <input onkeyup="getTotalPrice()" type="number" id="pricetDiscountInput" class="form-control w-50 "
+            placeholder="discount">
+          <small id="priceTotal" class="bg-danger px-1 rounded-2 py-2 w-25"></small>
+        </div>
+        <p id="wrongPrice" class="text-danger text-start alert alert-info  p-1 d-none"> Required </p>
+        <input type="number" id="productCountInput" class="form-control mb-3" placeholder="count">
+
+        <input oninput="categoryValidation()" type="text" id="productCategoryInput" class="form-control mb-3" placeholder="category">
+        <p id="wrongCat" class="text-danger text-start alert alert-info  p-1 d-none">Invalid category name [min : 2 character , max : 10 character]</p>
+        <button id="addBtn" class="btn w-100 rounded-3 btn-blue">Add Product</button>
+      </div>
+      <!-- search -->
+      <hr>
+      <div class="searchSection">
+        <input id="searchInput" onkeyup="searchData(this.value)" type="text" class="form-control mb-3" placeholder="search">
+        <div class="d-flex gap-5 mb-4">
+          <button id="searchByTitleBtn"  onclick="getSearchMood(this.id)"  class="btn  w-100 rounded-3 btn-blue">Search By Title</button>
+          <button id="searchByCatBtn" onclick="getSearchMood(this.id)"  class="btn  w-100 rounded-3 btn-blue">Search By Category</button>
+        </div>
+        <hr>
+        <div id="deleteAll" class="btn w-100 rounded-3 mb-3 btn-blue d-none"></div>
+        <div class="overflow-x-auto">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>TITLE</th>
+                <th>PRICE</th>
+                <th>TAXES</th>
+                <th>ADS</th>
+                <th>DISCOUNT</th>
+                <th>TOTAL</th>
+                <th>CATEGORY</th>
+                <th>UPDATE</th>
+                <th>DELETE</th>
+              </tr>
+            </thead>
+            <tbody id="table">
+  
+            </tbody>
+          </table></div>
+    
+
+
+      </div>
+    </div>
+    <h6 class="h6 text-center text-white font-sm m-0 pb-5">&copy; Nadine Abd-ElGawad All Rights Reseved</h6>
+  </section>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

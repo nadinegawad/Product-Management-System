@@ -1,0 +1,35 @@
+textarea{
+    resize: none;
+}
+*{
+    color:white
+}
+.test{
+    background :linear-gradient(#0a202e 0%,#25405b 20% ,#afb6d0 40%,#d9b9ce 50%,#97719a 79%,#0a202e 99%);
+}
+.form-control::placeholder{
+    color: rgb(219, 217, 217);
+    opacity: .7;
+}
+ .create-section  .form-control, .searchSection .form-control{
+    background-color: #0e1f2f;
+    color: #ccddf4;
+}
+.btn-blue{
+    background-color: #6187b5;
+    color: white;
+    border: 1px solid #fff;
+    transition: all .5s;
+}
+.table>:not(caption)>*>*{
+    background-color: #0e1f2f;
+    color: white;
+}
+.btn-blue:hover{
+    background-color: #6187b5;
+    letter-spacing: 1.2px;
+}
+small::before{
+    content: "Total: ";
+   
+}
